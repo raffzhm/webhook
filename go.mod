@@ -1,4 +1,4 @@
-module github.com/whatsauth/webhook
+module github.com/raffzhm/webhook
 
 go 1.21.3
 
@@ -8,7 +8,7 @@ require (
 	github.com/aiteung/atmessage v0.1.0
 	github.com/aiteung/module v0.0.27
 	github.com/whatsauth/wa v0.0.1
-	github.com/whatsauth/ws v0.0.2
+	github.com/whatsauth/webhook v0.0.10
 )
 
 require (
@@ -47,6 +47,7 @@ require (
 	github.com/valyala/fasthttp v1.50.0 // indirect
 	github.com/valyala/tcplisten v1.0.0 // indirect
 	github.com/whatsauth/watoken v0.1.3 // indirect
+	github.com/whatsauth/ws v0.0.2 // indirect
 	github.com/xdg-go/pbkdf2 v1.0.0 // indirect
 	github.com/xdg-go/scram v1.1.2 // indirect
 	github.com/xdg-go/stringprep v1.0.4 // indirect
