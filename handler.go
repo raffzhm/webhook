@@ -17,7 +17,7 @@ func Post(w http.ResponseWriter, r *http.Request) {
 	var msg model.IteungMessage
 	var resp atmessage.Response
 	json.NewDecoder(r.Body).Decode(&msg)
-	link := "https://medium.com/@rofinafiisr/whatsauth-free-2fa-otp-notif-whatsapp-gateway-api-gratis-f540249cd050"
+	link := "https://medium.com/@rafiazhim.ra/whatsauth-free-2fa-otp-notif-whatsapp-gateway-api-gratis-85617a671a5c"
 	if r.Header.Get("Secret") == os.Getenv("SECRET") {
 		if msg.Message == "loc" || msg.Message == "Loc" || msg.Message == "lokasi" || msg.LiveLoc {
 			location, err := ReverseGeocode(msg.Latitude, msg.Longitude)
@@ -37,14 +37,14 @@ func Post(w http.ResponseWriter, r *http.Request) {
 			resp, _ = atapi.PostStructWithToken[atmessage.Response]("Token", os.Getenv("TOKEN"), dt, "https://api.wa.my.id/api/send/message/text")
 		} else {
 			randm := []string{
-				"Hai Hai Haiii kamuuuui " + msg.Alias_name + "\nrofinya lagi gaadaa \n aku giseuubott salam kenall yaaaa \n Cara penggunaan WhatsAuth ada di link berikut ini ya kak...\n" + link,
-				"IHHH jangan SPAAM berisik tau giseu lagi tidur",
+				"Hai Hai Haiii kamuuuui " + msg.Alias_name + "\nrafinya lagi gaadaa \n aku selalu ada buat kamu salam kenall yaaaa \n Cara penggunaan WhatsAuth ada di link berikut ini ya kak...\n" + link,
+				"IHHH jangan SPAAM berisik",
 				"Kamu ganteng tau",
 				"Ihhh kamu cantik banget",
 				"bro, mending beliin aku nasgor",
 				"Jangan galak galak dong kak, aku takut tauu",
 				"Mawar Indah hanya akan muncul dipagi hari, MAKANYA BANGUN PAGI KAK",
-				"Cihuyyyy hari ini giseuu bahagiaaa banget",
+				"Kok Masih Pakai Andro?",
 				"Bercandyaaa berrcandyaaaa",
 			}
 			dt := &wa.TextMessage{
