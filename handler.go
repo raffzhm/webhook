@@ -19,7 +19,7 @@ func Post(w http.ResponseWriter, r *http.Request) {
 	json.NewDecoder(r.Body).Decode(&msg)
 	link := "https://medium.com/@rofinafiisr/whatsauth-free-2fa-otp-notif-whatsapp-gateway-api-gratis-f540249cd050"
 	if r.Header.Get("Secret") == os.Getenv("SECRET") {
-		if msg.Message == "loc" || msg.Message == "Loc" || msg.Message == "lokasi" {
+		if msg.Message == "loc" || msg.Message == "Loc" || msg.Message == "lokasi" || msg.LiveLoc {
 			location, err := ReverseGeocode(msg.Latitude, msg.Longitude)
 			if err != nil {
 				// Handle the error (e.g., log it) and set a default location name
